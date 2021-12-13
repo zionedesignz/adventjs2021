@@ -3,6 +3,7 @@ import listGifts from './02.js'
 import isValid from './03.js'
 import createXmasTree from './04.js'
 import daysToXmas from './05.js'
+import sumPairs from './06.js'
 
 const ovejas = [
   { name: 'Noa', color: 'azul' },
@@ -27,3 +28,5 @@ console.log('#04 - Creo que ya podemos sacar el gorro navideño, el turrón... �
 console.log(createXmasTree(7))
 console.log('#05 - ¡Qué ganas de abrir los regalos 🎁! Estoy tan nervioso que no paro de contar los días que faltan 🤣. ¿Me ayudas creando un programita? ¡Venga!')
 console.log(daysToXmas(date1))
+console.log('#06 - Buffff! Ya huelo las vacaciones pero todavía falta terminar los exámenes finales. ¡Y toca un poco de matemáticas! 😱 ¡Ayúdame!')
+console.log(sumPairs([2, 2, 3, 1], 4))
