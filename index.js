@@ -1,6 +1,8 @@
 import contarOvejas from './01.js'
 import listGifts from './02.js'
 import isValid from './03.js'
+import createXmasTree from './04.js'
+
 const ovejas = [
   { name: 'Noa', color: 'azul' },
   { name: 'Euge', color: 'rojo' },
@@ -19,3 +21,5 @@ console.log('#02 - ¡Menudo lío 😵! Un elfo está ayudando a Santa Claus. Pen
 console.log(listGifts(carta))
 console.log('#03 - ¡El Grinch anda suelto y quiere fastidiar la Navidad! 😱 Vamos a arreglar el lío que ha montado en la fábrica de regalos de Santa Claus')
 console.log(isValid(letterGood), isValid(letterBad))
+console.log('#04 - Creo que ya podemos sacar el gorro navideño, el turrón... ¡Y el árbol de navidad! 🎄 Vamos a montarlo con JavaScript.')
+console.log(createXmasTree(7))
