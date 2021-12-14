@@ -1,11 +1,13 @@
 export default function sumPairs(numbers, result) {
-  let res = null
-	numbers.forEach( n => {
-    const diff = result-n
-    if(numbers.includes(diff)){
+  let pairs = null
+	numbers.forEach( (number, index) => {
+    const diff = result-number
+    if(numbers.includes(diff) && pairs===null){
       const diffIndex = numbers.indexOf(diff)
-      res = new Array(numbers[diffIndex], n)
+      if(diffIndex !== index) {
+        pairs = new Array(number, numbers[diffIndex])
+      }
     }
   })
-	return res
+	return pairs
 }
