@@ -7,6 +7,7 @@ import sumPairs from './06.js'
 import contains from './07.js'
 import maxProfit from './08.js'
 import groupBy from './09.js'
+import getCoins from './10.js'
 
 const ovejas = [
   { name: 'Noa', color: 'azul' },
@@ -66,15 +67,17 @@ console.log(contains(almacen, 'camiseta'), contains(otroAlmacen, 'gameboy'))
 console.log('#08 - Hemos invertido en criptomonedas... Y el otro día se pusieron todos los valores en rojo. En lugar de asustarnos, vamos a ver si podemos optimizar nuevas inversiones.')
 console.log(maxProfit(pricesBtc), maxProfit(pricesDoge), maxProfit(pricesAda))
 console.log('#09 - Tenemos un montón de cajas en la fábrica de regalos... y como no automaticemos de alguna forma ordenar este desastre... ¡Igual nos quedamos sin Navidad!')
-console.log(groupBy([6.1, 4.2, 6.3], Math.floor), // { 6: [6.1, 6.3], 4: [4.2] }
-groupBy(['one', 'two', 'three'], 'length'), // { 3: ['one', 'two'], 5: ['three'] }
-groupBy([{age: 23}, {age: 24}], 'age'), // { 23: [{age: 23}], 24: [{age: 24}] }
-groupBy([1397639141184, 1363223700000], timestamp => new Date(timestamp).getFullYear()), // { 2013: [1363223700000], 2014: [1397639141184] }
-groupBy([
+console.log(
+  groupBy([6.1, 4.2, 6.3], Math.floor), 
+  groupBy(['one', 'two', 'three'], 'length'), 
+  groupBy([{age: 23}, {age: 24}], 'age'), 
+  groupBy([1397639141184, 1363223700000], 
+    timestamp => new Date(timestamp).getFullYear()
+  ), 
+  groupBy([
   { title: 'JavaScript: The Good Parts', rating: 8 },
   { title: 'Aprendiendo Git', rating: 10 },
   { title: 'Clean Code', rating: 9 },
-], 'rating') // { 8: [{ title: 'JavaScript: The Good Parts', rating: 8 }],
-//   9: [{ title: 'Clean Code', rating: 9 }],
-//   10: [{ title: 'Aprendiendo Git', rating: 10 }] }
-)
+], 'rating') )
+console.log('#10 - De cara a las ventas navideñas, vamos a automatizar el cambio de las monedas para que no se tenga que hacer manualmente. ¡Ganaremos tiempo! Pero primero, hay que programarlo.')
+console.log(getCoins(51), getCoins(3), getCoins(5), getCoins(16),getCoins(100))
