@@ -5,6 +5,7 @@ import createXmasTree from './04.js'
 import daysToXmas from './05.js'
 import sumPairs from './06.js'
 import contains from './07.js'
+import maxProfit from './08.js'
 
 const ovejas = [
   { name: 'Noa', color: 'azul' },
@@ -43,6 +44,9 @@ const otroAlmacen = {
     }
   }
 }
+const pricesBtc = [39, 18, 29, 25, 34, 32, 5]
+const pricesDoge = [18, 15, 12, 11, 9, 7]
+const pricesAda = [3, 3, 3, 3, 3]
 
 console.log('#01 - Con la emoción de que llega la navidad, nos está costando dormir bastante últimamente. Vamos a intentar usar este pequeño truco que nos ayudará a dormir más rápido 🐑')
 console.log(contarOvejas(ovejas))
@@ -58,3 +62,5 @@ console.log('#06 - Buffff! Ya huelo las vacaciones pero todavía falta terminar 
 console.log(sumPairs([0, 2, 2, 3, -1, 1, 5], 6))
 console.log('#07 - Tenemos un amigo que trabaja en una tienda y no es capaz de encontrar en el almacén los productos que tiene... ¿Le ayudamos?')
 console.log(contains(almacen, 'camiseta'), contains(otroAlmacen, 'gameboy'))
+console.log('#08 - Hemos invertido en criptomonedas... Y el otro día se pusieron todos los valores en rojo. En lugar de asustarnos, vamos a ver si podemos optimizar nuevas inversiones.')
+console.log(maxProfit(pricesBtc), maxProfit(pricesDoge), maxProfit(pricesAda))
