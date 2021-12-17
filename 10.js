@@ -1,6 +1,5 @@
 export default function getCoins(change) {
 	let changeArray = [0, 0, 0, 0, 0, 0]
-	let change = change
 	do {
 		if (change >= 50) {
 			changeArray[5]++
