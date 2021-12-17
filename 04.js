@@ -38,5 +38,3 @@ export default function createXmasTree(height) {
 
 	return `${tree}${trunk}`
 }
-
-console.log(createXmasTree(7))
