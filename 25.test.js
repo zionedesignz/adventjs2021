@@ -1,7 +1,25 @@
 import canMouseEat from "./25"
 
+const room = [
+  [' ', ' ', ' '],
+  [' ', ' ', 'm'],
+  [' ', ' ', '*']
+]
+
+const room2 = [
+  ['*', ' ', ' ', ' '],
+  [' ', 'm', '*', ' '],
+  [' ', ' ', ' ', ' '],
+  [' ', ' ', ' ', '*']
+]
+
 test("Challenge #25", () => {
-  expect(canMouseEat(tree, tree)).toBe(true)
-  expect(canMouseEat(tree, tree2)).toBe(false)
-  expect(canMouseEat(tree2, tree2)).toBe(true)
+  expect(canMouseEat('up',    room)).toBe(false)
+  expect(canMouseEat('down',  room)).toBe(true)
+  expect(canMouseEat('right', room)).toBe(false)
+  expect(canMouseEat('right', room)).toBe(false)
+  expect(canMouseEat('up',    room2)).toBe(false)
+  expect(canMouseEat('down',  room2)).toBe(false)
+  expect(canMouseEat('right', room2)).toBe(true)
+  expect(canMouseEat('right', room2)).toBe(false)
 })
